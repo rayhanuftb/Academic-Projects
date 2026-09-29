@@ -1,68 +1,66 @@
 # আভরণ (Abhoron): E-Commerce Website for Clothing and Textiles
 
-> Academic Project / Practical Work
-
-## 📚 Course Information
-
-- **Course Title:** E-Commerce, Digital Marketing and Cyber Security Lab
-- **Course Code:** ICT 4364
-- **Student:** Rayhanul Islam
-- **Institution:** University of Frontier Technology, Bangladesh
+**Course:** E-Commerce, Digital Marketing and Cyber Security Lab (ICT 4364)  
+**Academic Program:** B.Sc. in Educational Technology and Engineering  
+**Institution:** University of Frontier Technology, Bangladesh  
+**Author:** Rayhanul Islam
 
 ---
 
-## 📌 Overview
+## 📌 Project Overview
 
-An e-commerce website concept focused on clothing and textile products.
-
----
-
-## 🛠️ Technologies and Tools
-
-HTML, CSS, PHP, MySQL, Web Development
+**আভরণ (Abhoron)** is a responsive, boutique e-commerce web platform celebrating Bangladeshi handloom textiles, pure silk, and artisanal heritage apparel. It features full catalog browsing, category filtering, real-time search, interactive shopping cart management, demonstration checkout processing, SEO digital marketing metadata, and transactional order persistence.
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 🎯 Key Features
 
-- Product presentation
-- E-commerce workflow
-- Web-based interface
+1. **Artisanal Product Catalog**: Categorized collections for Jamdani Sarees, Rajshahi Silk, Hand-spun Khadi Panjabis, Kurtis, and Indigenous Shawls.
+2. **Dynamic Filtering & Search**: Client-side filtering by category slug and real-time keyword search.
+3. **Cart & Local Persistence**: Responsive shopping bag with dynamic quantity calculation and `localStorage` state persistence.
+4. **Demonstration Checkout**: Validates customer shipping and contact details and creates database order records with unique order tracking codes (`ABH-XXXXXX`).
+5. **SEO & Digital Marketing**: OpenGraph social media sharing metadata, semantic schema markup, and responsive typography.
 
 ---
 
-## 📁 Suggested Project Structure
+## 🏗️ Project Structure
 
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
+```
+Abhoron E-Commerce/
+├── backend/
+│   └── server.js           # REST API server (Node.js)
+├── database/
+│   ├── db.js               # SQLite connection manager
+│   ├── schema.sql          # Relational SQL schema
+│   ├── seed.js             # Sample product catalog seed script
+│   └── ecommerce.db        # Persistent SQLite database
+├── frontend/
+│   ├── index.html          # Responsive e-commerce storefront UI
+│   ├── styles.css          # Boutique heritage styling
+│   └── app.js              # Client-side shopping cart & checkout logic
+├── tests/
+│   └── ecommerce.test.js   # Automated integration test suite
+├── package.json
+└── README.md
 ```
 
-> Add only the folders and files that are relevant to this project.
-
 ---
 
-## 🚀 How to Explore
+## 🚀 Execution Instructions
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+### 1. Seed Product Catalog
+```bash
+node database/seed.js
+```
 
----
+### 2. Start Application Server
+```bash
+node backend/server.js
+```
+Navigate to: `http://localhost:4200`
 
-## 🎓 Academic Note
-
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
-
----
-
-## 👤 Author
-
-**Rayhanul Islam**  
-Educational Technology and Engineering  
-University of Frontier Technology, Bangladesh
+### 3. Run Automated Tests
+```bash
+npm test
+```
+*(or `node --test tests/ecommerce.test.js`)*

@@ -1,68 +1,67 @@
 # UFTB Hostel Management System
 
-> Academic Project / Practical Work
-
-## 📚 Course Information
-
-- **Course Title:** Database Management System Lab
-- **Course Code:** ICT 4254
-- **Student:** Rayhanul Islam
-- **Institution:** University of Frontier Technology, Bangladesh
+**Course:** Database Management System Lab (ICT 4254)  
+**Academic Program:** B.Sc. in Educational Technology and Engineering  
+**Institution:** University of Frontier Technology, Bangladesh  
+**Author:** Rayhanul Islam
 
 ---
 
-## 📌 Overview
+## 📌 Project Overview
 
-A database-driven hostel management system developed for managing hostel-related information and operations.
-
----
-
-## 🛠️ Technologies and Tools
-
-PHP, MySQL, XAMPP, HTML, CSS
+The **UFTB Hostel Management System** is a full-stack database application engineered to manage university residential operations. It implements relational database normalization, CRUD operations, room allocation tracking, fee payment invoicing, and maintenance ticket logging.
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 🎯 Key Database Entities & Relationships
 
-- Student and hostel information management
-- Database connectivity and CRUD operations
-- Web-based management interface
+- **`blocks`**: Hostel buildings, gender eligibility, and floor infrastructure.
+- **`rooms`**: Block foreign-key relation, room numbers, bed capacities, and rental rates.
+- **`students`**: Student academic identifiers, departments, and contact information.
+- **`allocations`**: Many-to-many relationship linking students to allocated beds with occupancy tracking and uniqueness constraints.
+- **`fee_payments`**: Monthly residential fee tracking, billing history, and payment status.
+- **`maintenance_requests`**: Facility issue tickets linked to specific rooms with priority and resolution workflows.
 
 ---
 
-## 📁 Suggested Project Structure
+## 🏗️ Project Structure
 
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
+```
+UFTB Hostel Management System/
+├── backend/
+│   └── server.js           # REST API server (Node.js)
+├── database/
+│   ├── db.js               # SQLite connection manager
+│   ├── schema.sql          # Relational SQL schema
+│   ├── seed.js             # Sample data generator
+│   └── hostel.db           # Persistent SQLite database
+├── frontend/
+│   ├── index.html          # Responsive management dashboard UI
+│   ├── styles.css          # Modern CSS styling
+│   └── app.js              # Frontend client application logic
+├── tests/
+│   └── hostel.test.js      # Automated CRUD & integration test suite
+├── package.json
+└── README.md
 ```
 
-> Add only the folders and files that are relevant to this project.
-
 ---
 
-## 🚀 How to Explore
+## 🚀 Execution Instructions
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+### 1. Seed Database
+```bash
+node database/seed.js
+```
 
----
+### 2. Start Application Server
+```bash
+node backend/server.js
+```
+Navigate to: `http://localhost:4100`
 
-## 🎓 Academic Note
-
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
-
----
-
-## 👤 Author
-
-**Rayhanul Islam**  
-Educational Technology and Engineering  
-University of Frontier Technology, Bangladesh
+### 3. Run Automated Tests
+```bash
+npm test
+```
+*(or `node --test tests/hostel.test.js`)*

@@ -1,68 +1,35 @@
-# YouTube Learning Content
+# YouTube Learning Content: Cloud Computing in Education
 
-> Academic Project / Practical Work
-
-## 📚 Course Information
-
-- **Course Title:** Digital Content Design and Development Lab
-- **Course Code:** ICTE 4232
-- **Student:** Rayhanul Islam
-- **Institution:** University of Frontier Technology, Bangladesh
+**Course:** Digital Content Design and Development Lab (ICTE 4232)  
+**Academic Program:** B.Sc. in Educational Technology and Engineering  
+**Institution:** University of Frontier Technology, Bangladesh  
+**Author:** Rayhanul Islam
 
 ---
 
-## 📌 Overview
+## 📌 Project Overview
 
-Educational digital learning content created for online video-based learning.
-
----
-
-## 🛠️ Technologies and Tools
-
-Educational Content Design, YouTube, Canva, OBS Studio
+This project comprises the instructional design, scriptwriting, visual storyboarding, and production framework for an educational video on **"Cloud Computing in Educational Technology: From Fundamentals to Scale"**.
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 🎯 Educational Objectives
 
-- Educational content planning
-- Digital learning material development
-- Online content publishing
-
----
-
-## 📁 Suggested Project Structure
-
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
-```
-
-> Add only the folders and files that are relevant to this project.
+1. Clarify fundamental cloud service models (**IaaS**, **PaaS**, **SaaS**) tailored for educational software engineers.
+2. Contrast physical on-premise infrastructure constraints with cloud elasticity during high-concurrency exam scenarios.
+3. Formulate cloud architecture design best practices including state decoupling, multi-AZ database replication, and automated scaling policies.
 
 ---
 
-## 🚀 How to Explore
+## 📂 Project Assets & Documents
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+- 📜 **[Timestamped Narration Script (`script.md`)](./script.md)**: Full 5-scene professional spoken voiceover and instructional delivery text.
+- 🎨 **[Visual Storyboard & Production Specs (`storyboard.md`)](./storyboard.md)**: Scene-by-scene timing, graphic asset blueprints, animation guidelines, and audiovisual technical standards.
 
 ---
 
-## 🎓 Academic Note
-
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
-
----
-
-## 👤 Author
+## 👨‍💻 Author
 
 **Rayhanul Islam**  
-Educational Technology and Engineering  
+B.Sc. in Educational Technology and Engineering  
 University of Frontier Technology, Bangladesh

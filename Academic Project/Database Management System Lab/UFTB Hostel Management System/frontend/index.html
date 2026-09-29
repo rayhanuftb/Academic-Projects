@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFTB Hostel Management System | DBMS Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-content">
+            <div class="logo">🏨 <strong>UFTB</strong> Hostel Management System</div>
+            <div class="nav-tag">ICT 4254 • DBMS Lab Project</div>
+        </div>
+    </header>
+
+    <main class="container main-layout">
+        <!-- Key Metrics Cards -->
+        <section class="stats-row" id="stats-container">
+            <div class="card stat-box">
+                <div class="stat-num" id="stat-students">0</div>
+                <div class="stat-lbl">Registered Students</div>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-num" id="stat-rooms">0</div>
+                <div class="stat-lbl">Total Rooms</div>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-num" id="stat-occupied">0</div>
+                <div class="stat-lbl">Occupied Beds</div>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-num" id="stat-available">0</div>
+                <div class="stat-lbl">Available Beds</div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab('students')">👥 Students & Allocations</button>
+            <button class="tab-btn" onclick="switchTab('rooms')">🚪 Rooms & Capacity</button>
+            <button class="tab-btn" onclick="switchTab('payments')">💳 Fee Payments</button>
+            <button class="tab-btn" onclick="switchTab('maintenance')">🛠️ Maintenance Issues</button>
+        </div>
+
+        <!-- Tab 1: Students -->
+        <section id="tab-students" class="tab-panel">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Student Roster & Room Allocation</h3>
+                    <button class="btn btn-primary" onclick="openModal('modal-add-student')">+ Register Student</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Full Name</th>
+                            <th>Department</th>
+                            <th>Assigned Room</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-students-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tab 2: Rooms -->
+        <section id="tab-rooms" class="tab-panel hidden">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Hostel Blocks & Room Availability</h3>
+                    <button class="btn btn-primary" onclick="openModal('modal-allocate-room')">+ Allocate Room</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Block Name</th>
+                            <th>Room No</th>
+                            <th>Floor</th>
+                            <th>Capacity</th>
+                            <th>Occupied</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-rooms-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tab 3: Payments -->
+        <section id="tab-payments" class="tab-panel hidden">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Hostel Fee Records</h3>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Month / Billing</th>
+                            <th>Amount (BDT)</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-payments-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tab 4: Maintenance -->
+        <section id="tab-maintenance" class="tab-panel hidden">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Room Maintenance & Complaints</h3>
+                    <button class="btn btn-primary" onclick="openModal('modal-add-maintenance')">+ Report Issue</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Block & Room</th>
+                            <th>Issue Description</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Reported At</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-maintenance-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal: Register Student -->
+    <div id="modal-add-student" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3>Register New Student</h3>
+            <form onsubmit="handleAddStudent(event)">
+                <div class="form-group">
+                    <label>Student ID (e.g. STD_202105)</label>
+                    <input type="text" id="ms-id" required>
+                </div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="ms-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="ms-email" required>
+                </div>
+                <div class="form-group">
+                    <label>Department</label>
+                    <input type="text" id="ms-dept" value="Educational Technology & Engineering" required>
+                </div>
+                <div class="modal-btns">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('modal-add-student')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Allocate Room -->
+    <div id="modal-allocate-room" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3>Allocate Room to Student</h3>
+            <form onsubmit="handleAllocateRoom(event)">
+                <div class="form-group">
+                    <label>Select Student</label>
+                    <select id="ar-student" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Select Room</label>
+                    <select id="ar-room" required></select>
+                </div>
+                <div class="modal-btns">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('modal-allocate-room')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm Allocation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

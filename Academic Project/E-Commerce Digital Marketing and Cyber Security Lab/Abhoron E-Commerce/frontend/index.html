@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আভরণ (Abhoron) | Heritage Clothing & Textiles</title>
+    <!-- SEO & Digital Marketing Metadata -->
+    <meta name="description" content="Abhoron offers authentic Bangladeshi handloom Jamdani, pure Silk, organic Khadi, and artisanal heritage textiles.">
+    <meta name="keywords" content="Abhoron, Jamdani, Rajshahi Silk, Khadi Panjabi, Bangladeshi Textiles, Handloom Saree">
+    <meta property="og:title" content="আভরণ (Abhoron) - Heritage Textiles & Boutiques">
+    <meta property="og:description" content="Discover exquisite handwoven sarees, artisanal kurtis, and heritage panjabis.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="brand">
+                <span class="brand-bangla">আভরণ</span>
+                <span class="brand-en">ABHORON</span>
+            </a>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search sarees, panjabis, fabrics..." oninput="handleSearch()">
+            </div>
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCartModal()">
+                    🛒 Cart (<span id="cart-count">0</span>)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Filter Bar -->
+    <div class="category-strip">
+        <div class="container cat-flex" id="category-filter-container">
+            <button class="cat-pill active" onclick="filterCategory(null)">All Collections</button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container main-content">
+        <div class="hero-banner">
+            <div class="hero-text">
+                <h2>Celebrate Bangladeshi Handloom Heritage</h2>
+                <p>Curated Jamdani, Mulberry Silk, and Hand-spun Khadi crafted by master artisans.</p>
+            </div>
+        </div>
+
+        <div class="product-grid" id="product-grid-container">
+            <!-- Injected via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal-overlay hidden">
+        <div class="modal-card modal-cart">
+            <div class="modal-header">
+                <h3>Your Shopping Bag</h3>
+                <button class="close-btn" onclick="toggleCartModal()">&times;</button>
+            </div>
+            <div id="cart-items-container" class="cart-items-list"></div>
+            <div class="cart-footer" id="cart-footer">
+                <div class="cart-total">Total: ৳<span id="cart-total-amount">0</span></div>
+                <button class="btn btn-primary btn-block" onclick="openCheckoutModal()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Demonstration Checkout</h3>
+                <button class="close-btn" onclick="closeCheckoutModal()">&times;</button>
+            </div>
+            <div class="demo-notice">ℹ️ Educational Demonstration: No real monetary transaction occurs.</div>
+            <form onsubmit="handleCheckout(event)" class="checkout-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="chk-name" required placeholder="Rayhanul Islam">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="chk-email" required placeholder="customer@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="chk-phone" required placeholder="+880 1700-000000">
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <textarea id="chk-address" rows="2" required placeholder="House, Road, City..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select id="chk-payment">
+                        <option value="Demo Cash on Delivery">Demo Cash on Delivery</option>
+                        <option value="Demo bKash / Nagad">Demo bKash / Nagad</option>
+                        <option value="Demo Card">Demo Card</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

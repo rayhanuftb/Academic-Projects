@@ -1,0 +1,14 @@
+{
+  "name": "uftb-hostel-management-system",
+  "version": "1.0.0",
+  "description": "Hostel Management System for Database Management System Lab (ICT 4254)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "seed": "node database/seed.js",
+    "test": "node --test tests/hostel.test.js"
+  },
+  "keywords": ["hostel", "dbms", "sqlite", "nodejs"],
+  "author": "Rayhanul Islam",
+  "license": "MIT"
+}

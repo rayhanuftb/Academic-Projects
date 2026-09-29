@@ -13,51 +13,96 @@
 
 ## 📌 Overview
 
-Mobile application development practice using Flutter and Dart.
+A Flutter-based mobile learning application called "আভরণ শিখুন" (Abhoron Shikhun), designed to provide Bangladeshi students with an interactive mobile learning experience. The app features course browsing, interactive quizzes, bookmarking, and progress tracking.
 
 ---
 
-## 🛠️ Technologies and Tools
+## 🎯 Key Features
 
-Flutter, Dart, Android Development
-
----
-
-## ✨ Key Learning Areas / Features
-
-- Mobile UI development
-- Flutter widgets
-- Application development practice
+- **Home Dashboard:** Welcome screen with progress overview and popular courses
+- **Course Catalog:** Browse available courses with difficulty levels and progress
+- **Interactive Quiz:** Answer questions with immediate feedback and scoring
+- **Bookmarks:** Save and manage favorite lessons
+- **User Profile:** View statistics and app information
+- **Responsive UI:** Material Design 3 with light/dark theme support
+- **State Management:** Provider pattern for efficient state handling
 
 ---
 
-## 📁 Suggested Project Structure
+## 🛠️ Technologies Used
 
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
+- **Framework:** Flutter 3.x
+- **Language:** Dart 3.x
+- **State Management:** Provider 6.x
+- **UI:** Material Design 3
+
+---
+
+## 📁 Project Structure
+
+```
+edu_bangla/
+├── pubspec.yaml
+├── lib/
+│   ├── main.dart                    App entry point & navigation
+│   ├── models/
+│   │   └── models.dart              Data models (Course, Lesson, Quiz, Bookmark)
+│   ├── providers/
+│   │   └── learning_provider.dart   State management
+│   └── screens/
+│       ├── home_screen.dart         Dashboard & course grid
+│       ├── courses_screen.dart      Course list with details
+│       ├── quiz_screen.dart         Interactive quiz interface
+│       ├── bookmarks_screen.dart    Saved bookmarks
+│       └── profile_screen.dart      User profile & stats
+├── assets/
+│   └── images/
+└── README.md
 ```
 
-> Add only the folders and files that are relevant to this project.
+---
+
+## 🚀 How to Run
+
+### Prerequisites
+
+- Flutter SDK 3.x installed
+- Dart SDK 3.x
+- Android Studio / VS Code with Flutter extension
+
+### Installation
+
+```bash
+cd edu_bangla
+flutter pub get
+flutter run
+```
+
+### Build
+
+```bash
+# Android
+flutter build apk
+
+# iOS
+flutter build ios
+```
 
 ---
 
-## 🚀 How to Explore
+## 📱 Screens
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+1. **Home:** Welcome card, progress stats, popular courses grid
+2. **Courses:** Full course list with difficulty badges and progress bars
+3. **Quiz:** 6 questions with immediate feedback and scoring
+4. **Bookmarks:** Saved lessons with remove functionality
+5. **Profile:** User stats, about dialog, theme info
 
 ---
 
 ## 🎓 Academic Note
 
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
+This project demonstrates practical skills in Flutter mobile application development, including UI design, state management, navigation, data modeling, and responsive layouts. It was developed as part of the Mobile Learning Application Development Lab coursework.
 
 ---
 

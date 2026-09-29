@@ -13,51 +13,50 @@
 
 ## 📌 Overview
 
-Reflective documentation developed during teaching practice and placement activities.
+A professionally structured reflective journal documenting the teaching practice experience. This journal follows Gibbs' Reflective Cycle and includes entries for teaching objectives, classroom observations, reflections, challenges encountered, and improvement plans.
 
 ---
 
-## 🛠️ Technologies and Tools
+## ⚠️ Note on Content
 
-Educational Practice, Reflection, Documentation
-
----
-
-## ✨ Key Learning Areas / Features
-
-- Teaching reflection
-- Classroom observations
-- Professional development documentation
+All entries in this journal are **sample/template entries** created for academic documentation purposes. They represent hypothetical teaching scenarios and reflections, not actual classroom experiences.
 
 ---
 
-## 📁 Suggested Project Structure
+## 📁 Project Structure
 
-```text
-.
+```
+Reflective Journal/
 ├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
+├── journal_entries/
+│   ├── week_01.md              Week 1: Orientation and First Observation
+│   ├── week_02.md              Week 2: First Teaching Attempt
+│   ├── week_03.md              Week 3: Lesson Planning Practice
+│   ├── week_04.md              Week 4: Managing Classroom Dynamics
+│   ├── week_05.md              Week 5: Using Technology in Teaching
+│   └── week_06.md              Week 6: Assessment and Feedback
+├── reflective_cycle.md         Gibbs' Reflective Cycle explanation
+└── improvement_plan.md         Personal improvement plan
 ```
 
-> Add only the folders and files that are relevant to this project.
-
 ---
 
-## 🚀 How to Explore
+## 🔄 Gibbs' Reflective Cycle
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+Each journal entry follows this structure:
+
+1. **Description:** What happened?
+2. **Feelings:** What were you thinking and feeling?
+3. **Evaluation:** What was good and bad about the experience?
+4. **Analysis:** What sense can you make of the situation?
+5. **Conclusion:** What else could you have done?
+6. **Action Plan:** If it arose again, what would you do?
 
 ---
 
 ## 🎓 Academic Note
 
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
+This reflective journal is part of the Teaching Practices Lab coursework. It demonstrates reflective practice, self-assessment, and professional development planning.
 
 ---
 

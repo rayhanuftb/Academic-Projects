@@ -15,6 +15,14 @@ All course projects and laboratory applications are organized inside the **[`Aca
 - 🌟 **[Browse Academic Project Directory Index](./Academic%20Project/)**
 - 🚀 **[Big Data and Analytics in Education Lab](./Academic%20Project/Big%20Data%20and%20Analytics%20in%20Education%20Lab/)** *(Fully Implemented: NLP & Time Series)*
 - ☁️ **[Blended Online and Digital Education Lab](./Academic%20Project/Blended%20Online%20and%20Digital%20Education%20Lab/)** *(Fully Implemented: Cloud Classroom Platform)*
+- 🔬 **[Educational Research and Data Analysis Lab](./Academic%20Project/Educational%20Research%20and%20Data%20Analysis%20Lab/)** *(Fully Implemented: Research & Statistical Analysis)*
+- 🌐 **[Educational Web Design and Development Lab](./Academic%20Project/Educational%20Web%20Design%20and%20Development%20Lab/)** *(Fully Implemented: Abhoron Educational Platform)*
+- 📊 **[Introduction to Data Science and Learning Analytics Lab](./Academic%20Project/Introduction%20to%20Data%20Science%20and%20Learning%20Analytics%20Lab/)** *(Fully Implemented: Heart Disease ML Prediction)*
+- 📱 **[Mobile Learning Application Development Lab](./Academic%20Project/Mobile%20Learning%20Application%20Development%20Lab/)** *(Fully Implemented: Flutter Learning App)*
+- 🌐 **[Networking and Telecommunication Lab](./Academic%20Project/Networking%20and%20Telecommunication%20Lab/)** *(Fully Implemented: Banking Network Simulation)*
+- ☕ **[Object Oriented Programming Lab](./Academic%20Project/Object%20Oriented%20Programming%20Lab/)** *(Fully Implemented: Java Swing GUI Application)*
+- 🧪 **[Software Engineering Testing and Quality Assurance Lab](./Academic%20Project/Software%20Engineering%20Testing%20and%20Quality%20Assurance%20Lab/)** *(Fully Implemented: SafeRx AI)*
+- 📚 **[Teaching Practices Lab](./Academic%20Project/Teaching%20Practices%20Lab/)** *(Fully Implemented: Lesson Plans & Reflective Journal)*
 
 ---
 
@@ -39,11 +47,14 @@ Python, C Programming, Java, Networking and Telecommunication, Data Structures a
 | Category | Skills |
 |---|---|
 | Programming | Python, C, Java, Dart, JavaScript |
-| Web Development | HTML, CSS, JavaScript, Node.js, REST APIs, PHP |
-| Mobile Development | Flutter |
-| Data Science & AI | Pandas, NumPy, Matplotlib, NLTK, Machine Learning, Deep Learning, CNN |
+| Web Development | HTML5, CSS3, JavaScript (ES6+), Responsive Design, Accessibility |
+| Mobile Development | Flutter, Dart, Material Design |
+| Data Science & ML | Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, SciPy |
+| Statistical Analysis | Hypothesis Testing, Regression, ANOVA, Correlation, Descriptive Statistics |
 | Database | SQLite, MySQL |
-| Development Tools | Git, GitHub, VS Code, Jupyter, NetBeans, Eclipse, Microsoft Office, Google Docs, Google Sheets |
+| Networking | Network Topology Design, VLAN Configuration, IP Subnetting, Cisco Configuration |
+| Software Engineering | OOP, Design Patterns, Unit Testing (pytest, JUnit), Quality Assurance |
+| Development Tools | Git, GitHub, VS Code, Jupyter, NetBeans, Eclipse, Microsoft Office |
 
 ---
 

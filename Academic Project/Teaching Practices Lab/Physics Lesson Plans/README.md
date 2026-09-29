@@ -11,53 +11,29 @@
 
 ---
 
-## 📌 Overview
+## ⚠️ Note
 
-Lesson plans prepared for Physics teaching practice.
-
----
-
-## 🛠️ Technologies and Tools
-
-Lesson Planning, Teaching Methodology
+These are **sample lesson plans** created for academic documentation. They represent hypothetical lessons designed for a Class 9 physics curriculum and are NOT actual lessons delivered during teaching practice.
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 📁 Project Structure
 
-- Learning objectives
-- Teaching activities
-- Assessment planning
-
----
-
-## 📁 Suggested Project Structure
-
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
 ```
-
-> Add only the folders and files that are relevant to this project.
-
----
-
-## 🚀 How to Explore
-
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+Physics Lesson Plans/
+├── README.md
+├── lesson_01_motion.md          Lesson 1: Introduction to Motion
+├── lesson_02_force.md           Lesson 2: Newton's Laws of Motion
+├── lesson_03_energy.md          Lesson 3: Work, Energy, and Power
+├── lesson_04_waves.md           Lesson 4: Sound Waves
+└── lesson_05_light.md           Lesson 5: Reflection of Light
+```
 
 ---
 
 ## 🎓 Academic Note
 
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
+These lesson plans demonstrate competency in educational planning, learning outcome design, assessment integration, and age-appropriate pedagogical strategies.
 
 ---
 

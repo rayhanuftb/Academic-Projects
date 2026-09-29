@@ -13,51 +13,75 @@
 
 ## 📌 Overview
 
-A web design and development implementation using the Abhoron e-commerce concept.
+আভরণ (Abhoron) is a responsive, interactive educational web platform designed for Bangladeshi students. This project demonstrates practical skills in HTML5, CSS3, and JavaScript for educational web development.
 
 ---
 
-## 🛠️ Technologies and Tools
+## 🎯 Key Features
 
-HTML, CSS, PHP, JavaScript
+- **Responsive Design:** Fully responsive layout for mobile, tablet, and desktop
+- **Dark Mode:** Toggle between light and dark themes with localStorage persistence
+- **Interactive Quiz:** Built-in Python basics quiz with scoring and progress tracking
+- **Accessibility:** Skip links, ARIA labels, keyboard navigation, focus-visible states
+- **Animated Counters:** Intersection Observer-based number animations
+- **Newsletter Form:** Subscription form with validation
+- **Contact Form:** Client-side form validation with feedback
+- **Scroll Progress:** Visual progress indicator during page scrolling
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 🛠️ Technologies Used
 
-- Web interface design
-- Responsive development
-- Educational web development practice
+| Technology | Purpose |
+|---|---|
+| HTML5 | Semantic markup, accessibility, structured content |
+| CSS3 | Responsive design, CSS Custom Properties, Flexbox, Grid |
+| JavaScript | Interactive features, DOM manipulation, dark mode |
 
 ---
 
-## 📁 Suggested Project Structure
+## 📁 Project Structure
 
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
+```
+Abhoron E-Commerce/
+├── index.html           Home page with hero, features, courses, testimonials
+├── courses.html         Course catalog page
+├── resources.html       Learning resources and external links
+├── quiz.html            Interactive quiz interface
+├── about.html           About the platform
+├── contact.html         Contact form page
+├── styles.css           Complete stylesheet with dark mode
+├── app.js               Main JavaScript (nav, theme, counters)
+├── quiz.js              Quiz engine with 10 questions
+└── README.md
 ```
 
-> Add only the folders and files that are relevant to this project.
+---
+
+## ♿ Accessibility Features
+
+- Skip navigation link
+- ARIA labels on interactive elements
+- Keyboard-navigable menu and forms
+- Focus-visible outlines
+- Semantic HTML5 elements (header, nav, main, section, article, footer)
+- Sufficient color contrast ratios
 
 ---
 
 ## 🚀 How to Explore
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+1. Open `index.html` in any modern web browser.
+2. Navigate using the top navigation bar.
+3. Try the interactive quiz on `quiz.html`.
+4. Toggle dark mode using the moon/sun icon.
+5. Test responsiveness by resizing the browser window.
 
 ---
 
 ## 🎓 Academic Note
 
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
+This project is part of the Educational Web Design and Development Lab coursework. It demonstrates practical web design principles, responsive development, accessibility standards, and interactive feature implementation. This is distinct from the Abhoron E-Commerce project in the E-Commerce Digital Marketing and Cyber Security Lab.
 
 ---
 

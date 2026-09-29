@@ -1,0 +1,14 @@
+{
+  "name": "abhoron-ecommerce",
+  "version": "1.0.0",
+  "description": "আভরণ (Abhoron) E-Commerce Website for Clothing and Textiles - ICT 4364 Lab",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "seed": "node database/seed.js",
+    "test": "node --test tests/ecommerce.test.js"
+  },
+  "keywords": ["ecommerce", "textiles", "jamdani", "silk", "nodejs", "sqlite"],
+  "author": "Rayhanul Islam",
+  "license": "MIT"
+}

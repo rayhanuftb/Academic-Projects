@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ - আভরণ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo"><span class="logo-icon" aria-hidden="true">&#128218;</span><span class="logo-text">আভরণ</span></a>
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation"><span class="hamburger" aria-hidden="true"></span></button>
+                    <ul id="nav-menu" class="nav-list">
+                        <li><a href="index.html" class="nav-link">হোম</a></li>
+                        <li><a href="courses.html" class="nav-link">কোর্সসমূহ</a></li>
+                        <li><a href="resources.html" class="nav-link">রিসোর্স</a></li>
+                        <li><a href="quiz.html" class="nav-link active">কুইজ</a></li>
+                        <li><a href="about.html" class="nav-link">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html" class="nav-link">যোগাযোগ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions"><button class="theme-toggle" aria-label="Toggle dark mode" id="theme-toggle"><span aria-hidden="true">&#9790;</span></button></div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" style="padding: 40px 0;">
+            <div class="container">
+                <h1 class="hero-title">অনুশীলন কুইজ</h1>
+                <p class="hero-subtitle">আপনার জ্ঞান পরীক্ষা করুন এবং শেখার অগ্রগতি যাচাই করুন</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <div id="quiz-container" class="features-grid">
+                    <article class="feature-card" id="quiz-card">
+                        <h2>পাইথন বেসিক কুইজ</h2>
+                        <p id="quiz-question">প্রশ্ন লোড হচ্ছে...</p>
+                        <div id="quiz-options" style="margin: 20px 0;"></div>
+                        <p id="quiz-feedback" style="font-weight: bold;"></p>
+                        <div id="quiz-progress" style="margin-top: 12px; color: var(--color-text-muted);"></div>
+                        <div style="margin-top: 20px;">
+                            <button class="btn btn-primary" id="next-btn" style="display:none;">পরবর্তী প্রশ্ন</button>
+                            <button class="btn btn-outline" id="restart-btn" style="display:none;">আবার শুরু করুন</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="quiz-result" style="display:none; text-align:center; padding: 40px 0;">
+                    <h2 class="section-title">কুইজ সম্পন্ন!</h2>
+                    <p style="font-size: 1.2rem; margin: 20px 0;">আপনার স্কোর: <strong id="final-score"></strong></p>
+                    <button class="btn btn-primary" onclick="location.reload()">আবার চেষ্টা করুন</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 আভরণ (Abhoron). সর্বস্বত্ব সংরক্ষিত। | শিক্ষার্থী: রায়হানুল ইসলাম</p></div></div>
+    </footer>
+    <script src="quiz.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

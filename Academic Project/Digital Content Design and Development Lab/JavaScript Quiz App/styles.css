@@ -1,0 +1,50 @@
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --primary-light: #e0e7ff;
+    --success: #16a34a;
+    --success-light: #dcfce7;
+    --danger: #dc2626;
+    --danger-light: #fee2e2;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+    --radius: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 1.5rem; }
+.quiz-app-container { width: 100%; max-width: 640px; }
+.quiz-header { text-align: center; margin-bottom: 1.5rem; }
+.quiz-badge { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 20px; margin-bottom: 0.75rem; }
+.quiz-header h1 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem; }
+.quiz-desc { color: var(--muted); font-size: 0.95rem; }
+.progress-bar-container { margin-bottom: 1.25rem; }
+.progress-bar-track { background: #e2e8f0; height: 8px; border-radius: 10px; overflow: hidden; }
+.progress-bar-fill { background: var(--primary); height: 100%; width: 0%; transition: width 0.3s ease; }
+.progress-labels { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; font-weight: 600; }
+.quiz-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+.category-tag { display: inline-block; background: #f1f5f9; color: var(--muted); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 4px; margin-bottom: 0.75rem; }
+.question-text { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; color: #0f172a; }
+.options-container { display: flex; flex-direction: column; gap: 0.75rem; }
+.option-btn { display: flex; align-items: center; gap: 0.75rem; width: 100%; text-align: left; padding: 0.85rem 1rem; border: 2px solid var(--border); border-radius: 8px; background: #fff; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.15s ease; font-family: inherit; }
+.option-btn:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-light); }
+.option-btn.correct { background: var(--success-light); border-color: var(--success); color: #14532d; font-weight: 700; }
+.option-btn.wrong { background: var(--danger-light); border-color: var(--danger); color: #7f1d1d; }
+.option-letter { width: 28px; height: 28px; border-radius: 6px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+.feedback-box { margin-top: 1.25rem; padding: 0.85rem 1rem; border-radius: 8px; font-size: 0.9rem; }
+.feedback-box.correct-fb { background: var(--success-light); color: #14532d; border-left: 4px solid var(--success); }
+.feedback-box.wrong-fb { background: var(--danger-light); color: #7f1d1d; border-left: 4px solid var(--danger); }
+.card-footer { margin-top: 1.5rem; display: flex; justify-content: flex-end; }
+.btn { padding: 0.65rem 1.25rem; font-size: 0.95rem; font-weight: 600; border-radius: 8px; cursor: pointer; border: none; font-family: inherit; transition: opacity 0.2s; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { opacity: 0.9; }
+.btn-lg { width: 100%; padding: 0.85rem; }
+.quiz-info-list { margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+.final-score-box { text-align: center; margin: 1.5rem 0; background: var(--primary-light); padding: 1.5rem; border-radius: var(--radius); }
+.final-score-num { font-size: 2.75rem; font-weight: 800; color: var(--primary-dark); }
+.final-score-pct { font-size: 1rem; font-weight: 700; color: var(--primary); }
+.result-icon { font-size: 3.5rem; text-align: center; margin-bottom: 0.5rem; }
+#screen-result { text-align: center; }
+.hidden { display: none !important; }

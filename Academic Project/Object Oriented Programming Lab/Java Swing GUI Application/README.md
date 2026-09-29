@@ -13,51 +13,75 @@
 
 ## 📌 Overview
 
-A graphical desktop application developed to practice object-oriented programming and GUI development.
+A Java Swing GUI application implementing a Student Management System. The project demonstrates core OOP concepts including encapsulation, inheritance, polymorphism, exception handling, and event-driven GUI programming.
 
 ---
 
-## 🛠️ Technologies and Tools
+## 🎯 OOP Concepts Demonstrated
 
-Java, Java Swing, OOP
+| Concept | Implementation |
+|---|---|
+| **Encapsulation** | Private fields with getters/setters in `Student` class |
+| **Inheritance** | `GraduateStudent` extends `Student` |
+| **Polymorphism** | `GradeCalculator` interface with `StandardGradeCalculator` and `DetailedGradeCalculator` implementations |
+| **Exception Handling** | Custom `StudentNotFoundException`, input validation, try-catch blocks |
+| **Abstraction** | `GradeCalculator` interface, `StudentManager` class |
+| **Event-Driven Programming** | ActionListener implementations for GUI buttons |
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 📁 Project Structure
 
-- Graphical user interface
-- Object-oriented design
-- Event-driven programming
-
----
-
-## 📁 Suggested Project Structure
-
-```text
-.
+```
+Java Swing GUI Application/
 ├── README.md
 ├── src/
-├── docs/
-├── images/
-└── assets/
+│   └── StudentManagementApp.java    Main application with all classes
+├── tests/
+│   └── StudentTest.java             JUnit tests for OOP classes
+└── README.md
 ```
-
-> Add only the folders and files that are relevant to this project.
 
 ---
 
-## 🚀 How to Explore
+## 🚀 How to Compile and Run
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+### Compile
+
+```bash
+javac -d out src/StudentManagementApp.java
+```
+
+### Run
+
+```bash
+java -cp out StudentManagementApp
+```
+
+### Run Tests (requires JUnit 5)
+
+```bash
+javac -cp out:junit-5.jar tests/StudentTest.java
+java -jar junit-platform-console-standalone.jar --class-path out:tests --select-class StudentTest
+```
+
+---
+
+## ✨ Features
+
+- Add, update, delete, and find students
+- GPA validation with custom exceptions
+- Grade calculation using polymorphic interface
+- JTable display with auto-refresh
+- Average GPA calculation
+- Graduate vs Undergraduate student differentiation
+- Confirmation dialogs for destructive actions
 
 ---
 
 ## 🎓 Academic Note
 
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
+This project demonstrates practical application of object-oriented programming concepts including class design, inheritance hierarchies, interface-based polymorphism, custom exception handling, and Swing GUI development. It was developed as part of the Object Oriented Programming Lab coursework.
 
 ---
 

@@ -1,68 +1,71 @@
 # Cloud Networking and Management Practical Work
 
-> Academic Project / Practical Work
-
-## 📚 Course Information
-
-- **Course Title:** Educational Cloud Networking and Management Lab
-- **Course Code:** ICTE 4342
-- **Student:** Rayhanul Islam
-- **Institution:** University of Frontier Technology, Bangladesh
+**Course:** Educational Cloud Networking and Management Lab (ICTE 4342)  
+**Academic Program:** B.Sc. in Educational Technology and Engineering  
+**Institution:** University of Frontier Technology, Bangladesh  
+**Author:** Rayhanul Islam
 
 ---
 
-## 📌 Overview
+## 📌 Project Overview
 
-Practical activities exploring cloud networking, cloud infrastructure concepts, and management fundamentals.
-
----
-
-## 🛠️ Technologies and Tools
-
-Cloud Computing, Networking, AWS Academy Concepts
+This project provides a comprehensive architectural blueprint, simulation framework, and Infrastructure as Code (IaC) specification for a highly available, multi-tier **Educational Virtual Private Cloud (VPC)**.
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 🎯 Architectural Design
 
-- Cloud networking concepts
-- Infrastructure management concepts
-- Practical cloud learning activities
-
----
-
-## 📁 Suggested Project Structure
-
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
+```
+                     Internet (0.0.0.0/0)
+                              │
+                    [ Internet Gateway ]
+                              │
+    ┌─────────────────────────┴─────────────────────────┐
+    │ Public Subnet (10.0.1.0/24 & 10.0.2.0/24)         │
+    │  - Application Load Balancers                     │
+    │  - NAT Gateways                                   │
+    └─────────────────────────┬─────────────────────────┘
+                              │
+    ┌─────────────────────────┴─────────────────────────┐
+    │ Private Application Subnet (10.0.10.0/24 & 11.0)  │
+    │  - Educational LMS Containers                     │
+    │  - Auto-scaling Microservices                     │
+    └─────────────────────────┬─────────────────────────┘
+                              │
+    ┌─────────────────────────┴─────────────────────────┐
+    │ Isolated Database Subnet (10.0.20.0/24 & 21.0)    │
+    │  - PostgreSQL / MySQL Multi-AZ Primary & Replica  │
+    └───────────────────────────────────────────────────┘
 ```
 
-> Add only the folders and files that are relevant to this project.
+---
+
+## 🏗️ Project Structure
+
+```
+Cloud Networking and Management/
+├── iac/
+│   └── vpc_architecture.tf     # Terraform HCL cloud infrastructure specification
+├── src/
+│   ├── __init__.py
+│   ├── vpc_simulator.py        # Multi-tier subnetting and route table simulator
+│   └── nacl_evaluator.py       # Stateless NACL network firewall rule engine
+├── tests/
+│   └── test_cloud_networking.py# Automated unit tests
+├── main.py                     # CLI topology validator
+└── README.md
+```
 
 ---
 
-## 🚀 How to Explore
+## 🚀 Execution Instructions
 
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
+### 1. Run Network Topology Simulator
+```bash
+python main.py
+```
 
----
-
-## 🎓 Academic Note
-
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
-
----
-
-## 👤 Author
-
-**Rayhanul Islam**  
-Educational Technology and Engineering  
-University of Frontier Technology, Bangladesh
+### 2. Run Automated Unit Tests
+```bash
+python -m unittest discover -s tests
+```

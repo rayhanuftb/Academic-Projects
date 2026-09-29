@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ - আভরণ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo"><span class="logo-icon" aria-hidden="true">&#128218;</span><span class="logo-text">আভরণ</span></a>
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation"><span class="hamburger" aria-hidden="true"></span></button>
+                    <ul id="nav-menu" class="nav-list">
+                        <li><a href="index.html" class="nav-link">হোম</a></li>
+                        <li><a href="courses.html" class="nav-link">কোর্সসমূহ</a></li>
+                        <li><a href="resources.html" class="nav-link">রিসোর্স</a></li>
+                        <li><a href="quiz.html" class="nav-link">কুইজ</a></li>
+                        <li><a href="about.html" class="nav-link">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html" class="nav-link active">যোগাযোগ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions"><button class="theme-toggle" aria-label="Toggle dark mode" id="theme-toggle"><span aria-hidden="true">&#9790;</span></button></div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" style="padding: 40px 0;">
+            <div class="container">
+                <h1 class="hero-title">যোগাযোগ</h1>
+                <p class="hero-subtitle">আমাদের সাথে যোগাযোগ করুন</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container" style="max-width: 700px;">
+                <form id="contact-form" class="feature-card" style="text-align: left;">
+                    <h2 style="margin-bottom: 20px;">বার্তা পাঠান</h2>
+
+                    <div style="margin-bottom: 16px;">
+                        <label for="contact-name" style="display: block; margin-bottom: 4px; font-weight: 600;">পুরো নাম *</label>
+                        <input type="text" id="contact-name" name="name" required
+                            style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg); color: var(--color-text); font-size: 1rem; font-family: inherit;">
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label for="contact-email" style="display: block; margin-bottom: 4px; font-weight: 600;">ইমেইল *</label>
+                        <input type="email" id="contact-email" name="email" required
+                            style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg); color: var(--color-text); font-size: 1rem; font-family: inherit;">
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label for="contact-subject" style="display: block; margin-bottom: 4px; font-weight: 600;">বিষয় *</label>
+                        <select id="contact-subject" name="subject" required
+                            style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg); color: var(--color-text); font-size: 1rem; font-family: inherit;">
+                            <option value="">বিষয় নির্বাচন করুন</option>
+                            <option value="general">সাধারণ জিজ্ঞাসা</option>
+                            <option value="courses">কোর্স সম্পর্কে</option>
+                            <option value="technical">প্রযুক্তিগত সমস্যা</option>
+                            <option value="feedback">মতামত</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label for="contact-message" style="display: block; margin-bottom: 4px; font-weight: 600;">বার্তা *</label>
+                        <textarea id="contact-message" name="message" rows="5" required
+                            style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg); color: var(--color-text); font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+
+                    <p id="form-feedback" style="margin-bottom: 12px;"></p>
+
+                    <button type="submit" class="btn btn-primary">বার্তা পাঠান</button>
+                </form>
+
+                <div class="features-grid" style="margin-top: 40px;">
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#128231;</span>
+                        <h3>ইমেইল</h3>
+                        <p>abhoron.edu@example.com</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#127968;</span>
+                        <h3>ঠিকানা</h3>
+                        <p>বাংলাদেশ</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 আভরণ (Abhoron). সর্বস্বত্ব সংরক্ষিত। | শিক্ষার্থী: রায়হানুল ইসলাম</p></div></div>
+    </footer>
+
+    <script>
+    (function() {
+        var form = document.getElementById('contact-form');
+        var feedback = document.getElementById('form-feedback');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                feedback.textContent = 'ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে।';
+                feedback.style.color = '#4caf50';
+                form.reset();
+            });
+        }
+    })();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

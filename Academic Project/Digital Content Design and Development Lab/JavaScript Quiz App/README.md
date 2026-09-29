@@ -1,69 +1,37 @@
 # JavaScript Quiz App
 
-> Academic Project / Practical Work
-
-## 📚 Course Information
-
-- **Course Title:** Digital Content Design and Development Lab
-- **Course Code:** ICTE 4232
-- **Student:** Rayhanul Islam
-- **Institution:** University of Frontier Technology, Bangladesh
+**Course:** Digital Content Design and Development Lab (ICTE 4232)  
+**Academic Program:** B.Sc. in Educational Technology and Engineering  
+**Institution:** University of Frontier Technology, Bangladesh  
+**Author:** Rayhanul Islam
 
 ---
 
-## 📌 Overview
+## 📌 Project Overview
 
-An interactive web-based quiz application developed using JavaScript and deployed online.
-
----
-
-## 🛠️ Technologies and Tools
-
-HTML, CSS, JavaScript
+The **JavaScript Quiz App** is a responsive single-page web assessment application built with vanilla HTML5, CSS3, and modern JavaScript (ES6+). It provides real-time objective question evaluations, progress bar tracking, dynamic question banks, explanation breakdowns, and final mastery percentage calculations.
 
 ---
 
-## ✨ Key Learning Areas / Features
+## 🎯 Key Features
 
-- Interactive questions
-- Answer validation
-- Score calculation
-- Online deployment
+1. **Dynamic Question Bank (`questions.js`)**: Easily expandable modular question repository with multiple choices, correct answer indices, and pedagogical rationale.
+2. **Instant Feedback**: Color-coded answer evaluation with immediate instructional feedback explaining why an answer is correct or incorrect.
+3. **Progress Tracking**: Real-time progress bar updating dynamically as the learner advances through the assessment.
+4. **Responsive Mobile UI**: Accessible layout tested across desktop, tablet, and mobile viewports.
 
 ---
 
-## 📁 Suggested Project Structure
+## 🚀 Execution Instructions
 
-```text
-.
-├── README.md
-├── src/
-├── docs/
-├── images/
-└── assets/
+Simply open `index.html` in any modern web browser or serve via any static HTTP server:
+
+```bash
+# Using Node built-in server or static hosting
+npx serve .
 ```
 
-> Add only the folders and files that are relevant to this project.
-
----
-
-## 🚀 How to Explore
-
-1. Review the source code or project files.
-2. Check the `docs` folder for documentation, if available.
-3. View screenshots or demonstrations in the `images` folder.
-4. Read this README for project context and academic information.
-
----
-
-## 🎓 Academic Note
-
-This work was completed as part of academic laboratory learning and is included in my academic portfolio to demonstrate practical skills, technical growth, and hands-on learning.
-
----
-
-## 👤 Author
-
-**Rayhanul Islam**  
-Educational Technology and Engineering  
-University of Frontier Technology, Bangladesh
+### Run Automated Unit Tests
+```bash
+node --test tests/quiz.test.js
+```
