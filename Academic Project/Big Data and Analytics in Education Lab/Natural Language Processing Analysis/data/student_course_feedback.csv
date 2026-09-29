@@ -1,0 +1,26 @@
+id,course,student_id,feedback,rating
+1,Big Data and Analytics in Education,STD_101,"The course content is excellent and highly engaging. The lab exercises on NLP and time series were very helpful.",5
+2,Big Data and Analytics in Education,STD_102,"Lectures were well structured and easy to follow. The professor provided clear explanations for complex algorithms.",5
+3,Big Data and Analytics in Education,STD_103,"The assignment instructions were somewhat confusing and unclear in the first two weeks.",2
+4,Big Data and Analytics in Education,STD_104,"Great hands-on coding sessions! I really enjoyed working with Pandas and Matplotlib.",5
+5,Big Data and Analytics in Education,STD_105,"The pace of the class was too fast during the deep learning module. More practical examples are needed.",3
+6,Big Data and Analytics in Education,STD_106,"Valuable educational insights. Learning analytics techniques will definitely help my research.",5
+7,Big Data and Analytics in Education,STD_107,"The online discussion forum was unresponsive and feedback on assignments was delayed.",2
+8,Big Data and Analytics in Education,STD_108,"Fantastic lab assistant! Always supportive and ready to troubleshoot code errors.",5
+9,Big Data and Analytics in Education,STD_109,"Text preprocessing and sentiment analysis labs were the best part of the semester.",5
+10,Big Data and Analytics in Education,STD_110,"Some readings were outdated and boring. Would prefer more modern case studies.",3
+11,Blended Online and Digital Education,STD_111,"The cloud classroom platform made submitting homework so easy and interactive.",5
+12,Blended Online and Digital Education,STD_112,"Video streaming for recorded lectures was slow and frustrating during peak hours.",2
+13,Blended Online and Digital Education,STD_113,"Loved the interactive quiz module! Instant feedback helped me identify areas for improvement.",5
+14,Blended Online and Digital Education,STD_114,"Clear course objectives and supportive faculty members throughout the term.",4
+15,Blended Online and Digital Education,STD_115,"Navigation between modules was difficult on mobile screens.",2
+16,Introduction to Data Science,STD_116,"The machine learning project on heart disease prediction was practical and rewarding.",5
+17,Introduction to Data Science,STD_117,"Statistical concepts were well explained with real-world healthcare datasets.",4
+18,Introduction to Data Science,STD_118,"The midterm exam was unfairly difficult compared to the sample questions provided.",2
+19,Software Engineering and QA,STD_119,"Thorough coverage of automated unit testing and quality assurance metrics.",5
+20,Software Engineering and QA,STD_120,"The group project coordination was stressful, but the final software outcome was excellent.",4
+21,Database Management System,STD_121,"SQL query optimization sessions were informative and comprehensive.",5
+22,Database Management System,STD_122,"Database normalization concepts were abstract and difficult to grasp at first.",3
+23,Networking and Telecommunication,STD_123,"Packet tracer simulation for banking network design was brilliant and practical.",5
+24,Networking and Telecommunication,STD_124,"Lab computers had outdated network configuration software which caused delays.",2
+25,Object Oriented Programming,STD_125,"Java Swing GUI building exercises were engaging and very well organized.",5

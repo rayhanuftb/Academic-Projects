@@ -1,0 +1,4 @@
+Model,MAE,RMSE,MAPE_percent,R2_Score
+Simple Moving Average (SMA-7),142.7761,162.9473,15.94,-0.9779
+Exponential Smoothing (EMA),166.6797,193.4559,18.34,-1.7879
+Autoregressive Model (AR-7),27.5041,38.352,3.28,0.8904

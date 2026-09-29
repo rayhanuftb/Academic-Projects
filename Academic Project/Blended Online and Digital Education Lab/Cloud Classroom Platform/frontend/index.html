@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Classroom Platform | Educational Technology</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" onclick="switchView('landing')">
+                <span class="logo-icon">☁️</span>
+                <span class="logo-text">Cloud<strong>Classroom</strong></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#catalog" onclick="switchView('catalog')">Course Catalog</a>
+                <a href="#dashboard" id="nav-dashboard-link" class="hidden" onclick="switchView('dashboard')">My Dashboard</a>
+                <a href="#about" onclick="switchView('about')">About Lab</a>
+            </nav>
+            <div class="nav-auth" id="nav-auth-section">
+                <button class="btn btn-outline" onclick="openModal('login-modal')">Log In</button>
+                <button class="btn btn-primary" onclick="openModal('register-modal')">Sign Up</button>
+            </div>
+            <div class="nav-user hidden" id="nav-user-section">
+                <div class="user-badge">
+                    <span class="user-avatar" id="nav-avatar">U</span>
+                    <span class="user-name" id="nav-user-name">User</span>
+                    <span class="user-role-tag" id="nav-user-role">Student</span>
+                </div>
+                <button class="btn btn-sm btn-outline" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dynamic Application Container -->
+    <main class="main-content">
+        <!-- Notification Toast -->
+        <div id="toast-container" class="toast-container"></div>
+
+        <!-- 1. LANDING VIEW -->
+        <section id="view-landing" class="app-view">
+            <div class="hero-section">
+                <div class="hero-badge">🎓 ICTE 4332 - Blended, Online and Digital Education Lab</div>
+                <h1 class="hero-title">Next-Generation Cloud Learning for Modern Education</h1>
+                <p class="hero-subtitle">
+                    A responsive, scalable digital classroom supporting seamless course management, interactive multimedia lessons, objective quiz auto-scoring, and real-time student learning analytics.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" onclick="switchView('catalog')">Explore Courses</button>
+                    <button class="btn btn-secondary btn-lg" onclick="fillDemoLogin('student')">Try Student Demo</button>
+                    <button class="btn btn-secondary btn-lg" onclick="fillDemoLogin('instructor')">Try Instructor Demo</button>
+                </div>
+            </div>
+
+            <!-- Key Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Modular Curriculum</h3>
+                    <p>Structured video lessons, reading resources, and sequential instructional milestones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Instant Quiz Scoring</h3>
+                    <p>Automated grading for objective assessments with real-time feedback and explanation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Analytics</h3>
+                    <p>Interactive tracking of lesson completion, assignment submissions, and student mastery.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Role-based access control, cryptographic password hashing (scrypt), and RESTful API architecture.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. COURSE CATALOG VIEW -->
+        <section id="view-catalog" class="app-view hidden">
+            <div class="section-header">
+                <div>
+                    <h2>Course Catalog</h2>
+                    <p class="section-desc">Browse available academic modules and enroll to begin learning.</p>
+                </div>
+                <div id="catalog-instructor-action" class="hidden">
+                    <button class="btn btn-primary" onclick="openModal('create-course-modal')">+ Create New Course</button>
+                </div>
+            </div>
+            <div class="course-grid" id="course-cards-container">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- 3. DASHBOARD VIEW (Role Adaptive) -->
+        <section id="view-dashboard" class="app-view hidden">
+            <div class="section-header">
+                <div>
+                    <h2 id="dashboard-title">My Learning Dashboard</h2>
+                    <p class="section-desc" id="dashboard-subtitle">Track enrolled courses, submissions, and quiz scores.</p>
+                </div>
+                <div id="instructor-quick-actions" class="hidden">
+                    <button class="btn btn-primary" onclick="openModal('create-course-modal')">+ Create Course</button>
+                </div>
+            </div>
+
+            <!-- Metrics Summary Cards -->
+            <div class="dashboard-stats-grid" id="dashboard-stats-container">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Dashboard Content Container -->
+            <div class="dashboard-content" id="dashboard-content-area">
+                <!-- Enrolled courses or Instructor managed courses -->
+            </div>
+        </section>
+
+        <!-- 4. COURSE DETAIL VIEW -->
+        <section id="view-course-detail" class="app-view hidden">
+            <div class="course-detail-header">
+                <button class="btn btn-sm btn-outline back-btn" onclick="switchView('catalog')">← Back to Courses</button>
+                <div class="course-meta">
+                    <span class="course-code-badge" id="cd-code">ICTE 4332</span>
+                    <h1 id="cd-title">Course Title</h1>
+                    <p id="cd-desc">Course Description</p>
+                    <div class="cd-instructor-bar">
+                        <span>Instructor: <strong id="cd-instructor">Prof. Dr. Rahman</strong></span>
+                        <span id="cd-enrollment-status"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Detail Navigation Tabs -->
+            <div class="course-tabs">
+                <button class="tab-btn active" onclick="switchCourseTab('lessons')">📖 Lessons & Content</button>
+                <button class="tab-btn" onclick="switchCourseTab('quizzes')">📝 Quizzes</button>
+                <button class="tab-btn" onclick="switchCourseTab('assignments')">📂 Assignments</button>
+                <button class="tab-btn" onclick="switchCourseTab('announcements')">📢 Announcements</button>
+            </div>
+
+            <!-- Tab 1: Lessons -->
+            <div id="tab-lessons" class="course-tab-content">
+                <div class="tab-actions" id="instructor-lesson-actions">
+                    <!-- Instructor Add Lesson button -->
+                </div>
+                <div class="lessons-list" id="cd-lessons-container"></div>
+            </div>
+
+            <!-- Tab 2: Quizzes -->
+            <div id="tab-quizzes" class="course-tab-content hidden">
+                <div class="tab-actions" id="instructor-quiz-actions"></div>
+                <div class="quizzes-list" id="cd-quizzes-container"></div>
+            </div>
+
+            <!-- Tab 3: Assignments -->
+            <div id="tab-assignments" class="course-tab-content hidden">
+                <div class="tab-actions" id="instructor-assignment-actions"></div>
+                <div class="assignments-list" id="cd-assignments-container"></div>
+            </div>
+
+            <!-- Tab 4: Announcements -->
+            <div id="tab-announcements" class="course-tab-content hidden">
+                <div class="tab-actions" id="instructor-announcement-actions"></div>
+                <div class="announcements-list" id="cd-announcements-container"></div>
+            </div>
+        </section>
+
+        <!-- 5. ABOUT LAB VIEW -->
+        <section id="view-about" class="app-view hidden">
+            <div class="about-card">
+                <h2>Blended, Online and Digital Education Lab</h2>
+                <p><strong>Course Code:</strong> ICTE 4332</p>
+                <p><strong>Program:</strong> B.Sc. in Educational Technology and Engineering</p>
+                <p><strong>Institution:</strong> University of Frontier Technology, Bangladesh</p>
+                <p><strong>Student:</strong> Rayhanul Islam</p>
+                <hr>
+                <h3>Academic Laboratory Scope</h3>
+                <p>
+                    This project demonstrates the design and practical implementation of an asynchronous and synchronous Cloud Classroom Platform. It implements role-based pedagogical interfaces for both students and instructors, interactive content delivery, automated objective assessments, and relational database persistence.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODALS -->
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Account Login</h3>
+                <button class="modal-close" onclick="closeModal('login-modal')">&times;</button>
+            </div>
+            <form onsubmit="handleLogin(event)" class="modal-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="login-email" required placeholder="student@uftb.edu.bd">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" required placeholder="••••••••">
+                </div>
+                <div class="demo-hints">
+                    <p>Demo Accounts:</p>
+                    <button type="button" class="btn-link" onclick="fillLoginForm('student@uftb.edu.bd', 'Student@123')">Student Demo</button>
+                    |
+                    <button type="button" class="btn-link" onclick="fillLoginForm('instructor@uftb.edu.bd', 'Instructor@123')">Instructor Demo</button>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Create New Account</h3>
+                <button class="modal-close" onclick="closeModal('register-modal')">&times;</button>
+            </div>
+            <form onsubmit="handleRegister(event)" class="modal-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="reg-name" required placeholder="Rayhanul Islam">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="reg-email" required placeholder="user@uftb.edu.bd">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-password" required placeholder="Minimum 6 characters">
+                </div>
+                <div class="form-group">
+                    <label>Academic Role</label>
+                    <select id="reg-role">
+                        <option value="student">Student</option>
+                        <option value="instructor">Instructor</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal-overlay hidden">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3 id="quiz-modal-title">Objective Quiz Assessment</h3>
+                <button class="modal-close" onclick="closeModal('quiz-modal')">&times;</button>
+            </div>
+            <div class="modal-body" id="quiz-modal-body">
+                <!-- Injected quiz questions or score results -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Course Modal -->
+    <div id="create-course-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Create New Course</h3>
+                <button class="modal-close" onclick="closeModal('create-course-modal')">&times;</button>
+            </div>
+            <form onsubmit="handleCreateCourse(event)" class="modal-form">
+                <div class="form-group">
+                    <label>Course Code</label>
+                    <input type="text" id="cc-code" required placeholder="ICTE 4332">
+                </div>
+                <div class="form-group">
+                    <label>Course Title</label>
+                    <input type="text" id="cc-title" required placeholder="Blended, Online and Digital Education">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" id="cc-category" placeholder="Educational Technology">
+                </div>
+                <div class="form-group">
+                    <label>Course Description</label>
+                    <textarea id="cc-desc" rows="3" placeholder="Overview of the curriculum..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Publish Course</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

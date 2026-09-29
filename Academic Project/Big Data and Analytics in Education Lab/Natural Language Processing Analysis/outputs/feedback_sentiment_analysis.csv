@@ -1,0 +1,26 @@
+id,course,text,sentiment_score,sentiment_label
+1,Big Data and Analytics in Education,The course content is excellent and highly engaging. The lab exercises on NLP and time series were very helpful.,1.0,Positive
+2,Big Data and Analytics in Education,Lectures were well structured and easy to follow. The professor provided clear explanations for complex algorithms.,1.0,Positive
+3,Big Data and Analytics in Education,The assignment instructions were somewhat confusing and unclear in the first two weeks.,-1.0,Negative
+4,Big Data and Analytics in Education,Great hands-on coding sessions! I really enjoyed working with Pandas and Matplotlib.,1.0,Positive
+5,Big Data and Analytics in Education,The pace of the class was too fast during the deep learning module. More practical examples are needed.,1.0,Positive
+6,Big Data and Analytics in Education,Valuable educational insights. Learning analytics techniques will definitely help my research.,1.0,Positive
+7,Big Data and Analytics in Education,The online discussion forum was unresponsive and feedback on assignments was delayed.,-1.0,Negative
+8,Big Data and Analytics in Education,Fantastic lab assistant! Always supportive and ready to troubleshoot code errors.,1.0,Positive
+9,Big Data and Analytics in Education,Text preprocessing and sentiment analysis labs were the best part of the semester.,1.0,Positive
+10,Big Data and Analytics in Education,Some readings were outdated and boring. Would prefer more modern case studies.,-1.0,Negative
+11,Blended Online and Digital Education,The cloud classroom platform made submitting homework so easy and interactive.,1.0,Positive
+12,Blended Online and Digital Education,Video streaming for recorded lectures was slow and frustrating during peak hours.,-1.0,Negative
+13,Blended Online and Digital Education,Loved the interactive quiz module! Instant feedback helped me identify areas for improvement.,1.0,Positive
+14,Blended Online and Digital Education,Clear course objectives and supportive faculty members throughout the term.,1.0,Positive
+15,Blended Online and Digital Education,Navigation between modules was difficult on mobile screens.,-1.0,Negative
+16,Introduction to Data Science,The machine learning project on heart disease prediction was practical and rewarding.,1.0,Positive
+17,Introduction to Data Science,Statistical concepts were well explained with real-world healthcare datasets.,1.0,Positive
+18,Introduction to Data Science,The midterm exam was unfairly difficult compared to the sample questions provided.,-1.0,Negative
+19,Software Engineering and QA,Thorough coverage of automated unit testing and quality assurance metrics.,1.0,Positive
+20,Software Engineering and QA,"The group project coordination was stressful, but the final software outcome was excellent.",0.0,Neutral
+21,Database Management System,SQL query optimization sessions were informative and comprehensive.,1.0,Positive
+22,Database Management System,Database normalization concepts were abstract and difficult to grasp at first.,-1.0,Negative
+23,Networking and Telecommunication,Packet tracer simulation for banking network design was brilliant and practical.,1.0,Positive
+24,Networking and Telecommunication,Lab computers had outdated network configuration software which caused delays.,0.0,Neutral
+25,Object Oriented Programming,Java Swing GUI building exercises were engaging and very well organized.,1.0,Positive
