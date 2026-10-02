@@ -1,4 +1,4 @@
-# Future of Cardiac Care: Predicting Heart Disease with Machine Learning SafeRx AI
+# Future of Cardiac Care: Predicting Heart Disease with Machine Learning -- SafeRx AI
 
 > Academic Project / Practical Work
 
